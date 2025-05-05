@@ -2,33 +2,19 @@
   box-sizing: border-box;
 }
 
-
 div {
   color: white;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   text-align: center;
 }
 
-
-a:hover {
-    text-decoration: none;
-    color: #00f; 
-    font-size: 1.2rem;
-    display: inline-block;
-    margin-top: 20px;
-    border: 1px solid #00f;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #111;
 }
 
 body {
@@ -45,6 +31,18 @@ body {
   align-items: center;
   height: 100vh;
   font-family: Arial, sans-serif;
+}
+
+.dashboard-btn {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-decoration: none;
 }
 
 .pitch {

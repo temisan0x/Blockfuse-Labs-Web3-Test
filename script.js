@@ -2,18 +2,26 @@ const player1 = document.getElementById('player1');
 const player2 = document.getElementById('player2');
 const ball = document.getElementById('ball');
 const timer = document.getElementById('timer');
+const pitch = document.querySelector('.pitch');
 
-// set animation
-setInterval(() => {
-  const x = Math.random() * 80;
-  const y = Math.random() * 40;
-  player1.style.transform = `translate(${x}vw, ${y}vh)`;
-  player2.style.transform = `translate(${x}vw, ${y}vh)`;
+function moveElements() {
+  const pitchWidth = pitch.clientWidth;
+  const pitchHeight = pitch.clientHeight;
 
-  const ballX = Math.random() * 40;
-  const ballY = Math.random() * 30;
-  ball.style.transform = `translate(${ballX}vw, ${ballY}vh)`;
-}, 1000);
+  const player1X = Math.random() * (pitchWidth - 20); // subtract element width
+  const player1Y = Math.random() * (pitchHeight - 20);
+  player1.style.transform = `translate(${player1X}px, ${player1Y}px)`;
+
+  const player2X = Math.random() * (pitchWidth - 20);
+  const player2Y = Math.random() * (pitchHeight - 20);
+  player2.style.transform = `translate(${player2X}px, ${player2Y}px)`;
+
+  const ballX = Math.random() * (pitchWidth - 15); // smaller size
+  const ballY = Math.random() * (pitchHeight - 15);
+  ball.style.transform = `translate(${ballX}px, ${ballY}px)`;
+}
+
+setInterval(moveElements, 1000);
 
 // Timer
 let seconds = 0;
